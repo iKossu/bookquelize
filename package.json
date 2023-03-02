@@ -1,0 +1,11 @@
+{
+  "name": "bookquelize",
+  "version": "1.0.0",
+  "description": "A book registry application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilkka Koiste",
+  "license": "ISC"
+}
