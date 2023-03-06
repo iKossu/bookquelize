@@ -1,10 +1,7 @@
-const express = require('express');
+const router = require('express').Router();
+const booksController = require('../controllers/books');
 
-const router = express.Router();
-
-/* GET books listing. */
-router.get('/', (_, res) => {
-  res.send('respond with a resource');
-});
+router.post('/', booksController.postOne);
+router.get('/', booksController.getAll);
 
 module.exports = router;
