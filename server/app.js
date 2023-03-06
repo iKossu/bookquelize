@@ -2,8 +2,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const booksRouter = require('./routes/books');
-const db = require('./middlewares/sequelize');
+const booksRouter = require('./src/routes/books');
+const db = require('./src/middlewares/sequelize');
 
 const app = express();
 
