@@ -7,12 +7,12 @@ const api = axios.create({
   timeout: 20000,
 });
 
-export const postRequest = async (url, data) => {
-  const response = await api.post(url, data);
-  return response;
+export const postRequest = async (url, values) => {
+  const { data } = await api.post(url, values);
+  return data;
 };
 
 export const getRequest = async (url) => {
-  const response = await api.get(url);
-  return response;
+  const { data } = await api.get(url);
+  return data;
 };
