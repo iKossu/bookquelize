@@ -3,11 +3,11 @@ const booksService = require('../services/books');
 const postOne = async (req, res, next) => {
   try {
     const {
-      body: book,
+      body: props,
       db: { models: { Book } },
     } = req;
-    await booksService.postOne(Book, book);
-    return res.status(204).end();
+    const book = await booksService.createOne(Book, props);
+    return res.json({ book });
   } catch (error) {
     return next(error);
   }
@@ -19,12 +19,15 @@ const getAll = async (req, res, next) => {
       db: { models: { Book } },
       query,
     } = req;
-    const { page: limit = 20 } = query;
-    const books = await booksService.readAll(Book, { limit });
-    return res.status(200).json({ books });
+    const books = await booksService.readLatest(Book, query);
+    const bookCount = await booksService.readCount(Book);
+    return res.json({ bookCount, books });
   } catch (error) {
     return next(error);
   }
 };
 
-module.exports = { postOne, getAll };
+module.exports = {
+  postOne,
+  getAll,
+};
