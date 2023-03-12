@@ -5,7 +5,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     author: DataTypes.STRING,
-    timestamp: DataTypes.STRING,
+    timestamp: {
+      type: DataTypes.STRING,
+      defaultValue: `${new Date()}`,
+    },
   }, {
     tableName: 'books',
     timestamps: false,
