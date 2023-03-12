@@ -4,6 +4,10 @@
   "description": "A book registry application.",
   "main": "index.js",
   "scripts": {
+    "docker:build": "docker-compose -p bookquelize build",
+    "docker:up": "docker-compose -p bookquelize up",
+    "docker:down": "docker-compose -p bookquelize down",
+    "docker:down:volumes": "docker-compose -p bookquelize down --volumes",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ilkka Koiste",
