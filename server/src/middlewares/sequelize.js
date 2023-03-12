@@ -13,10 +13,6 @@ const db = (req, _, next) => {
     modelDefiner(sequelize, DataTypes);
   });
 
-  (async function synchronizeModels() {
-    await sequelize.sync({ alter: true });
-  }());
-
   req.db = sequelize;
   next();
 };
