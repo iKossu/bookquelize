@@ -6,6 +6,10 @@ A user can browse a collection of books and add new books.
 
 The client is implemented using `create-react-app` and the server is implemented using `express-generator`.
 
+## Prerequisites
+
+- Docker
+
 ## Installation
 
 1. Start Docker containers and networks.
