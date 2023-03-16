@@ -10,7 +10,7 @@ services:
       - /api/node_modules
       - ./server:/api
     ports:
-      - "3000:3000"
+      - "5000:5000"
     networks:
       - app
     restart: unless-stopped
@@ -23,11 +23,10 @@ services:
       - /app/node_modules
       - ./client:/app
     ports:
-      - "8000:3000"
+      - "3000:3000"
     networks:
       - app
     restart: unless-stopped
 networks:
   app:
-  db:
     driver: bridge
