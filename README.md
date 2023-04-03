@@ -9,6 +9,7 @@ The client is implemented using `create-react-app` and the server is implemented
 ## Prerequisites
 
 - Docker
+- Node.js
 
 ## Installation
 
@@ -25,7 +26,6 @@ npm run docker:up
   - Split Modal into its own component
   - Implement a more elegant error handling
 - Server
-  - Implement/fix WebSocket
   - Book model ought to use `DATETIME` for `timestamp`
   - Figure out a more elegant way to get the sequelize Book model to Book service
   - Implement `express-validator`'s *Schema Validation* for Book

@@ -1,20 +1,16 @@
-### File Variables
-@protocol = http
-@host = localhost
-@port = 5000
 @limit = 20
 @offset = 0
 
 ### GET books
 # @name books
-GET {{protocol}}://{{host}}:{{port}}/books/latest
+GET {{baseUrl}}/books/latest
 ?limit={{limit}}
 &offset={{offset}}
 Content-Type: {{contentType}}
 
 ### POST books
 # @name books
-POST {{protocol}}://{{host}}:{{port}}/books
+POST {{baseUrl}}/books
 Content-Type: {{contentType}}
 
 {
