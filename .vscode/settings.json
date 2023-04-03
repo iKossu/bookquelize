@@ -1,0 +1,10 @@
+{
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "contentType": "application/json; charset=UTF-8"
+        },
+        "local": {
+            "baseUrl": "http://localhost:5005/api"
+        }
+    }
+}
